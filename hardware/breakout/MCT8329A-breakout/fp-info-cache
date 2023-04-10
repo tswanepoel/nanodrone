@@ -1,4 +1,4 @@
-20384942530531800
+20386623555493654
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -84538,6 +84538,13 @@ test point THT pad
 0
 1
 1
+Texas_Instruments
+MCT8329A1IREER
+
+
+0
+37
+37
 Transformer_SMD
 Pulse_P0926NL
 SMT Gate Drive Transformer, 1:1:1, 8.0x6.3x5.3mm (https://productfinder.pulseeng.com/products/datasheets/SPM2007_61.pdf)
