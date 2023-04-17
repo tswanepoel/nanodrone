@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Power_Extended")(type "KiCad")(uri "C:/Users/Theunis/repos/nanodrone/hardware/support/Power_Extended.kicad_sym")(options "")(descr ""))
+  (lib (name "Regulator_Linear_Extended")(type "KiCad")(uri "C:/Users/Theunis/repos/nanodrone/hardware/support/Regulator_Linear_Extended.kicad_sym")(options "")(descr ""))
+)

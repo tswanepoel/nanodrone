@@ -45,7 +45,6 @@
         "silk_text_thickness": 0.15,
         "silk_text_upright": false,
         "zones": {
-          "45_degree_only": false,
           "min_clearance": 0.0
         }
       },
@@ -56,15 +55,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        "clearance|149528680|106877107|9ecb0b94-cd00-4e9b-af6b-66e923aa30a3|8be94b91-3d4b-4368-a0d9-afd843f4be1d",
-        "clearance|149532893|106881320|9ecb0b94-cd00-4e9b-af6b-66e923aa30a3|8be94b91-3d4b-4368-a0d9-afd843f4be1d",
-        "clearance|152244607|103300393|b808cc5c-4044-460c-9c20-58bfb5777635|14efa15f-d55b-476f-ae15-542485426e4c",
-        "clearance|152357107|104048680|b808cc5c-4044-460c-9c20-58bfb5777635|8be94b91-3d4b-4368-a0d9-afd843f4be1d",
-        "clearance|152361320|104052893|b808cc5c-4044-460c-9c20-58bfb5777635|8be94b91-3d4b-4368-a0d9-afd843f4be1d",
-        "clearance|152949607|104005393|b808cc5c-4044-460c-9c20-58bfb5777635|14efa15f-d55b-476f-ae15-542485426e4c",
-        "clearance|152949607|105275393|b808cc5c-4044-460c-9c20-58bfb5777635|36ba892c-1e44-4afb-bf2e-7390a460449f"
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -81,7 +72,7 @@
         "duplicate_footprints": "warning",
         "extra_footprint": "warning",
         "footprint": "error",
-        "footprint_type_mismatch": "error",
+        "footprint_type_mismatch": "ignore",
         "hole_clearance": "error",
         "hole_near_hole": "error",
         "invalid_outline": "error",
@@ -97,7 +88,7 @@
         "missing_footprint": "warning",
         "net_conflict": "warning",
         "npth_inside_courtyard": "ignore",
-        "padstack": "error",
+        "padstack": "warning",
         "pth_inside_courtyard": "ignore",
         "shorting_items": "error",
         "silk_edge_clearance": "warning",
@@ -119,8 +110,6 @@
         "zones_intersect": "error"
       },
       "rules": {
-        "allow_blind_buried_vias": false,
-        "allow_microvias": true,
         "max_error": 0.005,
         "min_clearance": 0.0,
         "min_connection": 0.0,
@@ -134,9 +123,9 @@
         "min_text_height": 0.7999999999999999,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.19999999999999998,
-        "min_via_annular_width": 0.049999999999999996,
-        "min_via_diameter": 0.39999999999999997,
+        "min_track_width": 0.0,
+        "min_via_annular_width": 0.09999999999999999,
+        "min_via_diameter": 0.5,
         "solder_mask_clearance": 0.0,
         "solder_mask_min_width": 0.0,
         "solder_mask_to_copper_clearance": 0.0,
@@ -191,8 +180,7 @@
           "drill": 0.0
         }
       ],
-      "zones_allow_external_fillets": false,
-      "zones_use_no_outline": true
+      "zones_allow_external_fillets": false
     },
     "layer_presets": [],
     "viewports": []
@@ -402,7 +390,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "error",
+      "pin_to_pin": "warning",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
       "simulation_model_issue": "error",
@@ -417,25 +405,25 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "MCT8329A-breakout.kicad_pro",
+    "filename": "ICM-20948-breakout.kicad_pro",
     "version": 1
   },
   "net_settings": {
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.196,
-        "diff_pair_gap": 0.196,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.2,
         "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.204,
+        "diff_pair_width": 0.2,
         "line_style": 0,
-        "microvia_diameter": 0.5,
-        "microvia_drill": 0.25,
+        "microvia_diameter": 0.25,
+        "microvia_drill": 0.45,
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.204,
-        "via_diameter": 0.5,
+        "track_width": 0.2,
+        "via_diameter": 0.45,
         "via_drill": 0.25,
         "wire_width": 6
       }
@@ -482,18 +470,8 @@
       "version": 1
     },
     "net_format_name": "",
-    "ngspice": {
-      "fix_include_paths": true,
-      "fix_passive_vals": false,
-      "meta": {
-        "version": 0
-      },
-      "model_mode": 0,
-      "workbook_filename": ""
-    },
     "page_layout_descr_file": "",
-    "plot_directory": "export/",
-    "spice_adjust_passive_values": false,
+    "plot_directory": "",
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
     "spice_model_current_sheet_as_root": true,
@@ -504,7 +482,7 @@
   },
   "sheets": [
     [
-      "1e27b813-7292-40ee-928b-67d473077846",
+      "689ac9a5-fd16-4048-919f-48d7b333d35e",
       ""
     ]
   ],
