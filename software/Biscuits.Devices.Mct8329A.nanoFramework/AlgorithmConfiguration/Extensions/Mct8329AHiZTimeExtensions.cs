@@ -10,14 +10,14 @@
         public static float GetValue(this Mct8329AHiZTime hiZTime)
             => hiZTime switch
             {
-                Mct8329AHiZTime.Value10ms => 0.01f,
-                Mct8329AHiZTime.Value50ms => 0.05f,
-                Mct8329AHiZTime.Value100ms => 0.1f,
-                Mct8329AHiZTime.Value200ms => 0.2f,
-                Mct8329AHiZTime.Value300ms => 0.3f,
-                Mct8329AHiZTime.Value400ms => 0.4f,
-                Mct8329AHiZTime.Value500ms => 0.5f,
-                Mct8329AHiZTime.Value750ms => 0.75f,
+                Mct8329AHiZTime.Value10ms => .01f,
+                Mct8329AHiZTime.Value50ms => .05f,
+                Mct8329AHiZTime.Value100ms => .1f,
+                Mct8329AHiZTime.Value200ms => .2f,
+                Mct8329AHiZTime.Value300ms => .3f,
+                Mct8329AHiZTime.Value400ms => .4f,
+                Mct8329AHiZTime.Value500ms => .5f,
+                Mct8329AHiZTime.Value750ms => .75f,
                 Mct8329AHiZTime.Value1000ms => 1f,
                 Mct8329AHiZTime.Value2000ms => 2f,
                 Mct8329AHiZTime.Value3000ms => 3f,

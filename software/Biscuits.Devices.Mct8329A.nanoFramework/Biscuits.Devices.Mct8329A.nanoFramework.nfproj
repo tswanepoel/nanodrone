@@ -49,6 +49,16 @@
     <Compile Include="AlgorithmConfiguration\Mct8329AAlignDuty.cs" />
     <Compile Include="AlgorithmConfiguration\Mct8329AAlignRampRate.cs" />
     <Compile Include="AlgorithmConfiguration\Mct8329AAlignTime.cs" />
+    <Compile Include="HardwareConfiguration\Extensions\Mct8329ABrakeInputExtensions.cs" />
+    <Compile Include="HardwareConfiguration\Extensions\Mct8329ADacSoxAnaConfigExtensions.cs" />
+    <Compile Include="HardwareConfiguration\Extensions\Mct8329ADirInputExtensions.cs" />
+    <Compile Include="HardwareConfiguration\Extensions\Mct8329AFGConfigExtensions.cs" />
+    <Compile Include="HardwareConfiguration\Extensions\Mct8329AFGPinConfigExtensions.cs" />
+    <Compile Include="HardwareConfiguration\Extensions\Mct8329ASleepTimeExtensions.cs" />
+    <Compile Include="HardwareConfiguration\Extensions\Mct8329ASpdCtrlModeExtensions.cs" />
+    <Compile Include="HardwareConfiguration\Extensions\Mct8329ATBlankExtensions.cs" />
+    <Compile Include="HardwareConfiguration\Extensions\Mct8329ATPWdthExtensions.cs" />
+    <Compile Include="HardwareConfiguration\Extensions\Mct8329AZeroDutyHystExtensions.cs" />
     <Compile Include="Mct8329A.GateDriverConfiguration.cs" />
     <Compile Include="Mct8329A.HardwareConfiguration.cs" />
     <Compile Include="Mct8329A.FaultConfiguration.cs" />
@@ -114,7 +124,6 @@
   <ItemGroup>
     <Folder Include="FaultConfiguration\Extensions\" />
     <Folder Include="GateDriverConfiguration\Extensions\" />
-    <Folder Include="HardwareConfiguration\Extensions\" />
   </ItemGroup>
   <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.CSharp.targets" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.CSharp.targets')" />
   <ProjectExtensions>

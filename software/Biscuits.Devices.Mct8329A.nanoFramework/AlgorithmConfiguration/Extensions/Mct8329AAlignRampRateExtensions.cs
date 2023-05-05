@@ -10,9 +10,9 @@
         public static float GetValue(this Mct8329AAlignRampRate alignRampRate)
             => alignRampRate switch
             {
-                Mct8329AAlignRampRate.Value100mVps => 0.1f,
-                Mct8329AAlignRampRate.Value200mVps => 0.2f,
-                Mct8329AAlignRampRate.Value500mVps => 0.5f,
+                Mct8329AAlignRampRate.Value100mVps => .1f,
+                Mct8329AAlignRampRate.Value200mVps => .2f,
+                Mct8329AAlignRampRate.Value500mVps => .5f,
                 Mct8329AAlignRampRate.Value1000mVps => 1f,
                 Mct8329AAlignRampRate.Value2500mVps => 2.5f,
                 Mct8329AAlignRampRate.Value5000mVps => 5f,

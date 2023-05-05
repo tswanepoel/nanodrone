@@ -10,13 +10,13 @@ namespace Biscuits.Devices.AlgorithmConfiguration.Extensions
         public static float GetValue(this Mct8329AOLAcc olAcc)
             => olAcc switch
             {
-                Mct8329AOLAcc.Value5mHzps2 => 0.005f,
-                Mct8329AOLAcc.Value10mHzps2 => 0.01f,
-                Mct8329AOLAcc.Value25mHzps2 => 0.025f,
-                Mct8329AOLAcc.Value50mHzps2 => 0.05f,
-                Mct8329AOLAcc.Value100mHzps2 => 0.1f,
-                Mct8329AOLAcc.Value250mHzps2 => 0.25f,
-                Mct8329AOLAcc.Value500mHzps2 => 0.5f,
+                Mct8329AOLAcc.Value5mHzps2 => .005f,
+                Mct8329AOLAcc.Value10mHzps2 => .01f,
+                Mct8329AOLAcc.Value25mHzps2 => .025f,
+                Mct8329AOLAcc.Value50mHzps2 => .05f,
+                Mct8329AOLAcc.Value100mHzps2 => .1f,
+                Mct8329AOLAcc.Value250mHzps2 => .25f,
+                Mct8329AOLAcc.Value500mHzps2 => .5f,
                 Mct8329AOLAcc.Value1000mHzps2 => 1f,
                 Mct8329AOLAcc.Value2500mHzps2 => 2.5f,
                 Mct8329AOLAcc.Value5000mHzps2 => 5f,

@@ -10,10 +10,10 @@ namespace Biscuits.Devices.AlgorithmConfiguration.Extensions
         public static float GetValue(this Mct8329ASlowFirstCycFreq slowFirstCycFreq)
             => slowFirstCycFreq switch
             {
-                Mct8329ASlowFirstCycFreq.Value50mHz => 0.05f,
-                Mct8329ASlowFirstCycFreq.Value100mHz => 0.1f,
-                Mct8329ASlowFirstCycFreq.Value200mHz => 0.2f,
-                Mct8329ASlowFirstCycFreq.Value500mHz => 0.5f,
+                Mct8329ASlowFirstCycFreq.Value50mHz => .05f,
+                Mct8329ASlowFirstCycFreq.Value100mHz => .1f,
+                Mct8329ASlowFirstCycFreq.Value200mHz => .2f,
+                Mct8329ASlowFirstCycFreq.Value500mHz => .5f,
                 Mct8329ASlowFirstCycFreq.Value1000mHz => 1f,
                 Mct8329ASlowFirstCycFreq.Value2000mHz => 2f,
                 Mct8329ASlowFirstCycFreq.Value3000mHz => 3f,
