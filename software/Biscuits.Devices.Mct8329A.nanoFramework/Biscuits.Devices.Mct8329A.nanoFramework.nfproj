@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <NanoFrameworkProjectSystemPath>$(MSBuildExtensionsPath)\nanoFramework\v1.0\</NanoFrameworkProjectSystemPath>
+  </PropertyGroup>
+  <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.Default.props" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{11A8DD76-328B-46DF-9F39-F559912D0360};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>6e6495bc-1925-4b3d-ba54-18b75c6ce0e6</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Biscuits.Devices</RootNamespace>
+    <AssemblyName>Biscuits.Devices.Mct8329A.nanoFramework</AssemblyName>
+    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.props" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.props')" />
+  <ItemGroup>
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AMinDutyExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AIpdRepeatExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AIpdClkFreqExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AIpdAdvAngleExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AHiZTimeExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AFirstCycleFreqSelExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329ACurrThrExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329ABrkModeExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AAlignRampRateExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AAlignDutyExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AAlignTimeExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329ABrkTimeExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AMtrStartupExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AOLAccExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AOLDutyExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AOLHandoffCyclesExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AOpnClHandoffThrExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AResyncMinThresholdExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329ASlowFirstCycFreqExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AStartupBrkTimeExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AStatDetectThrExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329AFirstCycleFreqSel.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329AMinDuty.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329AOLHandoffCycles.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329AOpnClHandoffThr.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329AMotorStartup2.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329AOLAcc.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329AOLDuty.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329AAlignDuty.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329AAlignRampRate.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329AAlignTime.cs" />
+    <Compile Include="Mct8329A.GateDriverConfiguration.cs" />
+    <Compile Include="Mct8329A.HardwareConfiguration.cs" />
+    <Compile Include="Mct8329A.FaultConfiguration.cs" />
+    <Compile Include="HardwareConfiguration\Mct8329ABrakeInput.cs" />
+    <Compile Include="HardwareConfiguration\Mct8329AClkSel.cs" />
+    <Compile Include="GateDriverConfiguration\Mct8329ACsaGain.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329ACurrThr.cs" />
+    <Compile Include="HardwareConfiguration\Mct8329ADacSoxAnaConfig.cs" />
+    <Compile Include="HardwareConfiguration\Mct8329ADeviceConfig.cs" />
+    <Compile Include="HardwareConfiguration\Mct8329ADevMode.cs" />
+    <Compile Include="HardwareConfiguration\Mct8329ADigDeadTime.cs" />
+    <Compile Include="HardwareConfiguration\Mct8329ADirInput.cs" />
+    <Compile Include="HardwareConfiguration\Mct8329AFGConfig.cs" />
+    <Compile Include="HardwareConfiguration\Mct8329AFGPinConfig.cs" />
+    <Compile Include="GateDriverConfiguration\Mct8329AGDConfig1.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329AIpdAdvAngle.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329AIpdClkFreq.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329AIpdRepeat.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329AMotorStartup1.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329AMtrStartup.cs" />
+    <Compile Include="GateDriverConfiguration\Mct8329AOtsAutoRecovery.cs" />
+    <Compile Include="HardwareConfiguration\Mct8329APinConfig1.cs" />
+    <Compile Include="HardwareConfiguration\Mct8329APinConfig2.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329AResyncMinThreshold.cs" />
+    <Compile Include="GateDriverConfiguration\Mct8329ASelVdsLvl.cs" />
+    <Compile Include="HardwareConfiguration\Mct8329ASleepTime.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329ASlowFirstCycFreq.cs" />
+    <Compile Include="HardwareConfiguration\Mct8329ASpdCtrlMode.cs" />
+    <Compile Include="HardwareConfiguration\Mct8329ASpdPwmRangeSel.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329AStartupBrkTime.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329ABrkTime.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329ABrkMode.cs" />
+    <Compile Include="Mct8329ADeviceCtrl.cs" />
+    <Compile Include="Mct8329AGateDriverFaultStatus.cs" />
+    <Compile Include="Mct8329AControllerFaultStatus.cs" />
+    <Compile Include="Mct8329A.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329AHiZTime.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329AIsdConfig.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329AStatDetectThr.cs" />
+    <Compile Include="Mct8329AState.cs" />
+    <Compile Include="Mct8329ASysStatus1.cs" />
+    <Compile Include="Mct8329ASysStatus2.cs" />
+    <Compile Include="Mct8329ASysStatus3.cs" />
+    <Compile Include="HardwareConfiguration\Mct8329ATBlank.cs" />
+    <Compile Include="HardwareConfiguration\Mct8329ATPWdth.cs" />
+    <Compile Include="GateDriverConfiguration\Mct8329AVRefSel.cs" />
+    <Compile Include="HardwareConfiguration\Mct8329AZeroDutyHyst.cs" />
+    <Compile Include="Mct8329A.AlgorithmConfiguration.cs" />
+    <Compile Include="HardwareConfiguration\Mct8329AExtClkConfig.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib">
+      <HintPath>..\packages\nanoFramework.CoreLibrary.1.14.2\lib\mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Device.I2c">
+      <HintPath>..\packages\nanoFramework.System.Device.I2c.1.1.11\lib\System.Device.I2c.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FaultConfiguration\Extensions\" />
+    <Folder Include="GateDriverConfiguration\Extensions\" />
+    <Folder Include="HardwareConfiguration\Extensions\" />
+  </ItemGroup>
+  <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.CSharp.targets" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.CSharp.targets')" />
+  <ProjectExtensions>
+    <ProjectCapabilities>
+      <ProjectConfigurationsDeclaredAsItems />
+    </ProjectCapabilities>
+  </ProjectExtensions>
+</Project>

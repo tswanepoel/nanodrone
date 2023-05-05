@@ -1,4 +1,7 @@
 (fp_lib_table
   (version 7)
-  (lib (name "SnapEDA")(type "KiCad")(uri "${KIPRJMOD}/support/SnapEDA")(options "")(descr ""))
+  (lib (name "nanodrone")(type "KiCad")(uri "${KIPRJMOD}/nanodrone.pretty")(options "")(descr ""))
+  (lib (name "Texas_Instruments")(type "KiCad")(uri "${KIPRJMOD}/support/ti/footprints")(options "")(descr ""))
+  (lib (name "SnapEDA")(type "KiCad")(uri "${KIPRJMOD}/support/SnapEDA/footprints")(options "")(descr ""))
+  (lib (name "Connector_Hirose_Extended")(type "KiCad")(uri "${KIPRJMOD}/support/footprints/Connector_Hirose_Extended.pretty")(options "")(descr ""))
 )
