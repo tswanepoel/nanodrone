@@ -12,7 +12,7 @@
         private const uint SleepTimeMask = 0b11;
 
         private const int I2cTargetAddrLoc = 20;
-        private const uint I2cTargetAddrMask = 0x3F;
+        private const uint I2cTargetAddrMask = 0x7F;
 
         private const int FGConfigLoc = 13;
         private const uint FGConfigMask = 0b1;

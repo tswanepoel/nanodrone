@@ -1,5 +1,7 @@
 namespace Biscuits.Devices.HardwareConfiguration
 {
+    using System;
+
     public static class Mct8329AClkSelExtensions
     {
         public static string GetDescription(this Mct8329AClkSel clkSel)

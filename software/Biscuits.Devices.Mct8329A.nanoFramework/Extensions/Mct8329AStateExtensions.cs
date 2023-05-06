@@ -1,5 +1,7 @@
 namespace Biscuits.Devices.Extensions
 {
+    using System;
+
     public static class Mct8329AStateExtensions
     {
         public static string GetDescription(this Mct8329AState state)

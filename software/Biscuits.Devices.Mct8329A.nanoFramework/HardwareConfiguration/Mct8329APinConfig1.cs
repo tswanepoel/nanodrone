@@ -1,4 +1,6 @@
-﻿namespace Biscuits.Devices.HardwareConfiguration
+﻿using Biscuits.Devices.HardwareConfiguration.Extensions;
+
+namespace Biscuits.Devices.HardwareConfiguration
 {
     public struct Mct8329APinConfig1
     {
@@ -24,9 +26,9 @@
             get => (_value >> ParityLoc & ParityMask) != 0;
         }
 
-        public int DacoutVarAddr
+        public Mct8329ADacoutVarAddr DacoutVarAddr
         {
-            get => (int)(_value >> DacoutVarAddrLoc & DacoutVarAddrMask);
+            get => (Mct8329ADacoutVarAddr)(_value >> DacoutVarAddrLoc & DacoutVarAddrMask);
         }
 
         public Mct8329ABrakeInput BrakeInput

@@ -1,5 +1,7 @@
 namespace Biscuits.Devices.HardwareConfiguration
 {
+    using System;
+
     public static class Mct8329ADigDeadTimeExtensions
     {
         public static string GetDescription(this Mct8329ADigDeadTime digDeadTime)

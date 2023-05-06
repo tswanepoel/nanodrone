@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace Biscuits.Devices.AlgorithmConfiguration.Extensions
+﻿namespace Biscuits.Devices.AlgorithmConfiguration.Extensions
 {
+    using System;
+
     public static class Mct8329AStatDetectThrExtensions
     {
         public static string GetDescription(this Mct8329AStatDetectThr statDetectThr)

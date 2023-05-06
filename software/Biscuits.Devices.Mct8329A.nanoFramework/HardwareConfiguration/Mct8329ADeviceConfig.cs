@@ -59,9 +59,9 @@
             get => (Mct8329ADevMode)(_value >> DevModeLoc & DevModeMask);
         }
 
-        public Mct8329ASpdPwmRangeSel SpdPwmRangeSel
+        public Mct8329ASpdPwmRangeSelect SpdPwmRangeSelect
         {
-            get => (Mct8329ASpdPwmRangeSel)(_value >> SpdPwmRangeSelectLoc & SpdPwmRangeSelectMask);
+            get => (Mct8329ASpdPwmRangeSelect)(_value >> SpdPwmRangeSelectLoc & SpdPwmRangeSelectMask);
         }
 
         public Mct8329AClkSel ClkSel

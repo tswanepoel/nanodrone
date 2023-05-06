@@ -17,8 +17,8 @@
         private const int BstUVFaultLoc = 26;
         private const uint BstUVFaultMask = 0b1;
 
-        private const int GvddUVFaultLoc = 25;
-        private const uint GvddUVFaultMask = 0b1;
+        private const int GVddUVFaultLoc = 25;
+        private const uint GVddUVFaultMask = 0b1;
 
         private const int DrvOffLoc = 24;
         private const uint DrvOffMask = 0b1;
@@ -50,9 +50,9 @@
             get => ((_value >> BstUVFaultLoc) & BstUVFaultMask) != 0;
         }
 
-        public bool GvddUVFault
+        public bool GVddUVFault
         {
-            get => ((_value >> GvddUVFaultLoc) & GvddUVFaultMask) != 0;
+            get => ((_value >> GVddUVFaultLoc) & GVddUVFaultMask) != 0;
         }
 
         public bool DrvOff
