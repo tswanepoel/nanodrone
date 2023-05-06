@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace Biscuits.Devices.HardwareConfiguration.Extensions
+﻿namespace Biscuits.Devices.HardwareConfiguration.Extensions
 {
+    using System;
+
     public static class Mct8329ADacSoxAnaConfigExtensions
     {
         public static string GetDescription(this Mct8329ADacSoxAnaConfig dacSoxAnaConfig)

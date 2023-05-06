@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace Biscuits.Devices.HardwareConfiguration.Extensions
+﻿namespace Biscuits.Devices.HardwareConfiguration.Extensions
 {
+    using System;
+
     public static class Mct8329ADirInputExtensions
     {
         public static string GetDescription(this Mct8329ADirInput dirInput)
