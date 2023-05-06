@@ -5,7 +5,7 @@
     public static class Mct8329ABrkTimeExtensions
     {
         public static string GetDescription(this Mct8329ABrkTime brkTime)
-            => $"{brkTime.GetValue()} s";
+            => $"{brkTime.GetValue():F3} s";
 
         public static float GetValue(this Mct8329ABrkTime brkTime)
             => brkTime switch

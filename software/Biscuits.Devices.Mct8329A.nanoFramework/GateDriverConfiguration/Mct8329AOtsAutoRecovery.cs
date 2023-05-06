@@ -2,7 +2,7 @@
 {
     public enum Mct8329AOtsAutoRecovery
     {
-        OtsLatchedFault = 0x0,
-        OtsAutoRecovery = 0x1
+        LatchedFault = 0x0,
+        AutoRecovery = 0x1
     }
 }

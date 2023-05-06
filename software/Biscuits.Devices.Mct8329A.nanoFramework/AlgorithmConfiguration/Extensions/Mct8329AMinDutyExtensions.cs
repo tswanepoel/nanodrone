@@ -5,7 +5,7 @@
     public static class Mct8329AMinDutyExtensions
     {
         public static string GetDescription(this Mct8329AMinDuty minDuty)
-            => $"{minDuty.GetValue() * 100f} %";
+            => $"{minDuty.GetValue() * 100f:F1} %";
 
         public static float GetValue(this Mct8329AMinDuty minDuty)
             => minDuty switch

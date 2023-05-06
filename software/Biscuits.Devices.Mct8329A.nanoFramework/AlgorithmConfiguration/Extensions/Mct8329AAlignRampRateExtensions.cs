@@ -5,7 +5,7 @@
     public static class Mct8329AAlignRampRateExtensions
     {
         public static string GetDescription(this Mct8329AAlignRampRate alignRampRate)
-            => $"{alignRampRate.GetValue()} V/s";
+            => $"{alignRampRate.GetValue():F1} V/s";
 
         public static float GetValue(this Mct8329AAlignRampRate alignRampRate)
             => alignRampRate switch

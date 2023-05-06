@@ -1,5 +1,7 @@
 namespace Biscuits.Devices.GateDriverConfiguration
 {
+    using System;
+
     public static class Mct8329ASelVdsLvlExtensions
     {
         public static string GetDecription(this Mct8329ASelVdsLvl selVdsLvl)

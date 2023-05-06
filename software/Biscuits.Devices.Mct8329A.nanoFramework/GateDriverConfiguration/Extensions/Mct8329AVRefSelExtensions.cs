@@ -1,5 +1,7 @@
 namespace Biscuits.Devices.GateDriverConfiguration
 {
+    using System;
+
     public static class Mct8329AVRefSelExtensions
     {
         public static string GetDescription(this Mct8329AVRefSel vRefSel)

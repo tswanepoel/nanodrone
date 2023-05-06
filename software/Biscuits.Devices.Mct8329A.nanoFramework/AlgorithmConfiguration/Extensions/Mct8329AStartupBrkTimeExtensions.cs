@@ -5,7 +5,7 @@
     public static class Mct8329AStartupBrkTimeExtensions
     {
         public static string GetDescription(this Mct8329AStartupBrkTime startupBrkTime)
-            => $"{startupBrkTime.GetValue()} s";
+            => $"{startupBrkTime.GetValue() * 1_000f} ms";
 
         public static float GetValue(this Mct8329AStartupBrkTime startupBrkTime)
             => startupBrkTime switch

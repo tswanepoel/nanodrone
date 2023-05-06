@@ -1,7 +1,7 @@
 ﻿namespace Biscuits.Devices
 {
     using System;
-    using Biscuits.Devices.HardwareConfiguration;
+    using HardwareConfiguration;
 
     public partial class Mct8329A
     {

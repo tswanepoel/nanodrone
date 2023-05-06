@@ -5,7 +5,7 @@
     public static class Mct8329AAlignTimeExtensions
     {
         public static string GetDescription(this Mct8329AAlignTime alignTime)
-            => $"{alignTime.GetValue()} s";
+            => $"{alignTime.GetValue():F3} s";
 
         public static float GetValue(this Mct8329AAlignTime alignTime)
             => alignTime switch

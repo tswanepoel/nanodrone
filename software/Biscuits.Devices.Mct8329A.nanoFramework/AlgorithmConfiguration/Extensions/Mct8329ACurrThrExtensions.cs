@@ -5,7 +5,7 @@
     public static class Mct8329ACurrThrExtensions
     {
         public static string GetDescription(this Mct8329ACurrThr currThr)
-            => $"{currThr.GetValue()} V";
+            => $"{currThr.GetValue():F1} V";
 
         public static float GetValue(this Mct8329ACurrThr currThr)
             => currThr switch

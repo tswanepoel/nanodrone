@@ -5,7 +5,7 @@
     public static class Mct8329AOLAccExtensions
     {
         public static string GetDescription(this Mct8329AOLAcc olAcc)
-            => olAcc != Mct8329AOLAcc.NoLimit ? $"{olAcc.GetValue()} Hz/s²" : "No limit";
+            => olAcc != Mct8329AOLAcc.NoLimit ? $"{olAcc.GetValue():F3} Hz/s²" : "No limit";
 
         public static float GetValue(this Mct8329AOLAcc olAcc)
             => olAcc switch

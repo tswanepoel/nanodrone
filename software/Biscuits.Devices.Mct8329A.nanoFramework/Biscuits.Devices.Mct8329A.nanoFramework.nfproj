@@ -50,6 +50,26 @@
     <Compile Include="AlgorithmConfiguration\Mct8329AAlignRampRate.cs" />
     <Compile Include="AlgorithmConfiguration\Mct8329AAlignTime.cs" />
     <Compile Include="Extensions\Mct8329AStateExtensions.cs" />
+    <Compile Include="FaultConfiguration\Extensions\Mct8329ALckRetryExtensions.cs" />
+    <Compile Include="FaultConfiguration\Extensions\Mct8329ALockILimitDegExtensions.cs" />
+    <Compile Include="FaultConfiguration\Extensions\Mct8329ALockILimitModeExtensions.cs" />
+    <Compile Include="FaultConfiguration\Extensions\Mct8329ACbcILimitModeExtensions.cs" />
+    <Compile Include="FaultConfiguration\Extensions\Mct8329ALockILimitExtensions.cs" />
+    <Compile Include="FaultConfiguration\Extensions\Mct8329AMtrLckModeExtensions.cs" />
+    <Compile Include="FaultConfiguration\Extensions\Mct8329ANoMtrDegTimeExtensions.cs" />
+    <Compile Include="FaultConfiguration\Mct8329ACbcILimitMode.cs" />
+    <Compile Include="FaultConfiguration\Mct8329AFaultConfig1.cs" />
+    <Compile Include="FaultConfiguration\Mct8329AFaultConfig2.cs" />
+    <Compile Include="FaultConfiguration\Mct8329ALckRetry.cs" />
+    <Compile Include="FaultConfiguration\Mct8329AMtrLckMode.cs" />
+    <Compile Include="FaultConfiguration\Mct8329ALockILimit.cs" />
+    <Compile Include="FaultConfiguration\Mct8329ALockILimitDeg.cs" />
+    <Compile Include="FaultConfiguration\Mct8329ALockILimitMode.cs" />
+    <Compile Include="FaultConfiguration\Mct8329ANoMtrDegTime.cs" />
+    <Compile Include="GateDriverConfiguration\Extensions\Mct8329ACsaGainExtensions.cs" />
+    <Compile Include="GateDriverConfiguration\Extensions\Mct8329AOtsAutoRecoveryExtensions.cs" />
+    <Compile Include="GateDriverConfiguration\Extensions\Mct8329ASelVdsLvlExtensions.cs" />
+    <Compile Include="GateDriverConfiguration\Extensions\Mct8329AVRefSelExtensions.cs" />
     <Compile Include="HardwareConfiguration\Extensions\Mct8329ABrakeInputExtensions.cs" />
     <Compile Include="HardwareConfiguration\Extensions\Mct8329AClkSelExtensions.cs" />
     <Compile Include="HardwareConfiguration\Extensions\Mct8329ADacoutVarAddrExtensions.cs" />
@@ -128,10 +148,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="FaultConfiguration\Extensions\" />
-    <Folder Include="GateDriverConfiguration\Extensions\" />
   </ItemGroup>
   <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.CSharp.targets" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.CSharp.targets')" />
   <ProjectExtensions>

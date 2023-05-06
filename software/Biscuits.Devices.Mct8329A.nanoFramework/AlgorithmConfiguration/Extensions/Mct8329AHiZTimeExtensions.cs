@@ -5,7 +5,7 @@
     public static class Mct8329AHiZTimeExtensions
     {
         public static string GetDescription(this Mct8329AHiZTime hiZTime)
-            => $"{hiZTime.GetValue()} s";
+            => $"{hiZTime.GetValue():F3} s";
 
         public static float GetValue(this Mct8329AHiZTime hiZTime)
             => hiZTime switch
