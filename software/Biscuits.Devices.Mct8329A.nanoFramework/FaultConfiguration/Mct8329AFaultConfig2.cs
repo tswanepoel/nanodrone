@@ -42,7 +42,7 @@
         private const uint LockMinSpeedMask = 0b111;
 
         private const int AbnLockSpdRatioLoc = 2;
-        private const uint AnbLockSpnRatioMask = 0b11;
+        private const uint AbnLockSpdRatioMask = 0b11;
 
         private const int ZeroDutyThrLoc = 0;
         private const uint ZeroDutyThrMask = 0b11;
@@ -69,60 +69,60 @@
             get => (_value >> NoMotorEnLoc & NoMotorEnMask) != 0;
         }
 
-        //public Mct8329ALockAbnSpeed LockAbnSpeed
-        //{
-        //    get => (Mct8329ALockAbnSpeed)(_value >> LockAbnSpeedLoc & LockAbnSpeedMask) != 0;
-        //}
+        public Mct8329ALockAbnSpeed LockAbnSpeed
+        {
+            get => (Mct8329ALockAbnSpeed)(_value >> LockAbnSpeedLoc & LockAbnSpeedMask);
+        }
 
-        //public Mct8329ALossSyncTimes LossSyncTimes
-        //{
-        //    get => (Mct8329ALossSyncTimes)(_value >> LossSyncTimesLoc & LossSyncTimesMask) != 0;
-        //}
+        public Mct8329ALossSyncTimes LossSyncTimes
+        {
+            get => (Mct8329ALossSyncTimes)(_value >> LossSyncTimesLoc & LossSyncTimesMask);
+        }
 
-        //public Mct8329ANoMtrThr NoMtrThr
-        //{
-        //    get => (Mct8329ANoMtrThr)(_value >> NoMtrThrLoc & NoMtrThrMask) != 0;
-        //}
+        public Mct8329ANoMtrThr NoMtrThr
+        {
+            get => (Mct8329ANoMtrThr)(_value >> NoMtrThrLoc & NoMtrThrMask);
+        }
 
-        //public Mct8329AMaxVMMode MaxVMMode
-        //{
-        //    get => (Mct8329AMaxVMMode)(_value >> MaxVMModeLoc & MaxVMModeMask) != 0;
-        //}
+        public Mct8329AMaxVMMode MaxVMMode
+        {
+            get => (Mct8329AMaxVMMode)(_value >> MaxVMModeLoc & MaxVMModeMask);
+        }
 
-        //public Mct8329AMaxVMMotor MaxVMMotor
-        //{
-        //    get => (Mct8329AMaxVMMotor)(_value >> MaxVMMotorLoc & MaxVMMotorMask) != 0;
-        //}
+        public Mct8329AMaxVMMotor MaxVMMotor
+        {
+            get => (Mct8329AMaxVMMotor)(_value >> MaxVMMotorLoc & MaxVMMotorMask);
+        }
 
-        //public Mct8329AMinVMMode MinVMMode
-        //{
-        //    get => (Mct8329AMinVMMode)(_value >> MinVMModeLoc & MinVMModeMask) != 0;
-        //}
+        public Mct8329AMinVMMode MinVMMode
+        {
+            get => (Mct8329AMinVMMode)(_value >> MinVMModeLoc & MinVMModeMask);
+        }
 
-        //public Mct8329AMinVMMotor MinVMMotor
-        //{
-        //    get => (Mct8329AMinVMMotor)(_value >> MinVMMotorLoc & MinVMMotorMask) != 0;
-        //}
+        public Mct8329AMinVMMotor MinVMMotor
+        {
+            get => (Mct8329AMinVMMotor)(_value >> MinVMMotorLoc & MinVMMotorMask);
+        }
 
-        //public Mct8329AAutoRetryTimes AutoRetryTimes
-        //{
-        //    get => (Mct8329AAutoRetryTimes)(_value >> AutoRetryTimesLoc & AutoRetryTimesMask) != 0;
-        //}
+        public Mct8329AAutoRetryTimes AutoRetryTimes
+        {
+            get => (Mct8329AAutoRetryTimes)(_value >> AutoRetryTimesLoc & AutoRetryTimesMask);
+        }
 
-        //public Mct8329ALockMinSpeed LockMinSpeed
-        //{
-        //    get => (Mct8329ALockMinSpeed)(_value >> LockMinSpeedLoc & LockMinSpeedMask) != 0;
-        //}
+        public Mct8329ALockMinSpeed LockMinSpeed
+        {
+            get => (Mct8329ALockMinSpeed)(_value >> LockMinSpeedLoc & LockMinSpeedMask);
+        }
 
-        //public Mct8329AAbnLockSpdRatio AbnLockSpdRatio
-        //{
-        //    get => (Mct8329AAbnLockSpdRatio)(_value >> AbnLockSpdRatioLoc & AbnLockSpdRatioMask) != 0;
-        //}
+        public Mct8329AAbnLockSpdRatio AbnLockSpdRatio
+        {
+            get => (Mct8329AAbnLockSpdRatio)(_value >> AbnLockSpdRatioLoc & AbnLockSpdRatioMask);
+        }
 
-        //public Mct8329AZeroDutyThr ZeroDutyThr
-        //{
-        //    get => (Mct8329AZeroDutyThr)(_value >> ZeroDutyThrLoc & ZeroDutyThrMask) != 0;
-        //}
+        public Mct8329AZeroDutyThr ZeroDutyThr
+        {
+            get => (Mct8329AZeroDutyThr)(_value >> ZeroDutyThrLoc & ZeroDutyThrMask);
+        }
 
         private Mct8329AFaultConfig2(uint value)
         {
