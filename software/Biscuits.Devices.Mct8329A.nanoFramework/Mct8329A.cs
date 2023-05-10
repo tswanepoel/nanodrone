@@ -1,5 +1,6 @@
 ﻿namespace Biscuits.Devices
 {
+    using Biscuits.Devices.HardwareConfiguration;
     using System;
     using System.Device.I2c;
 
@@ -87,6 +88,16 @@
             return (Mct8329ASysStatus3)value;
         }
 
+        public void WriteAlgoCtrl1(Mct8329AAlgoCtrl1 algoCtrl1)
+        {
+            if (_disposed)
+            {
+                throw new ObjectDisposedException();
+            }
+
+            WriteUInt32(0xE6/*ALGO_CTRL1*/, (uint)algoCtrl1);
+        }
+
         public Mct8329ADeviceCtrl ReadDeviceCtrl()
         {
             if (_disposed)
@@ -96,6 +107,16 @@
 
             uint value = ReadUInt32(0xE8/*DEVICE_CTRL*/);
             return (Mct8329ADeviceCtrl)value;
+        }
+
+        public void WriteDeviceCtrl(Mct8329ADeviceCtrl deviceCtrl)
+        {
+            if (_disposed)
+            {
+                throw new ObjectDisposedException();
+            }
+
+            WriteUInt32(0xE8/*DEVICE_CTRL*/, (uint)deviceCtrl);
         }
 
         public float ReadInputDuty()
@@ -159,13 +180,29 @@
 
             _device.WriteRead(
                 new[] {
-                    (byte)(0b1 << 7/*OP_R/W = Read*/ | 0b0/*CRC_EN = False*/ | (0b01 << 5)/*DLEN = 32-bit*/ | 0x0/*M_SEC*/),
+                    (byte)((0b1 << 7)/*OP_R/W = Read*/ | (0b0 << 6)/*CRC_EN = False*/ | (0b1 << 4)/*DLEN = 32-bit*/ | 0x0/*M_SEC*/),
                     (byte)((0x0/*M_PAGE*/ << 4) | (((uint)registerAddressOffset >> 8) & 0xF)),
                     (byte)((uint)registerAddressOffset & 0xFF)
                 },
                 buffer);
 
             return BitConverter.ToUInt32(buffer, 0);
+        }
+
+        private void WriteUInt32(ushort registerAddressOffset, uint value)
+        {
+            byte[] buffer = BitConverter.GetBytes(value);
+
+            _device.Write(
+                new[] {
+                    (byte)((0b0 << 7)/*OP_R/W = Write*/ | (0b0 << 6)/*CRC_EN = False*/ | (0b1 << 4)/*DLEN = 32-bit*/ | 0x0/*M_SEC*/),
+                    (byte)((0x0/*M_PAGE*/ << 4) | (((uint)registerAddressOffset >> 8) & 0xF)),
+                    (byte)((uint)registerAddressOffset & 0xFF),
+                    buffer[0],
+                    buffer[1],
+                    buffer[2],
+                    buffer[3]
+                });
         }
 
         public void Dispose()

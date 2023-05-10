@@ -1,12 +1,14 @@
 ﻿namespace Biscuits.Devices.HardwareConfiguration
 {
+    using System;
+
     public struct Mct8329ADeviceConfig
     {
         private const int ParityLoc = 31;
         private const uint ParityMask = 0b1;
 
         private const int InputMaxFrequencyLoc = 16;
-        private const uint InputMinFrequencyMask = 0xFFFE;
+        private const uint InputMaxFrequencyMask = 0x7FFF;
 
         private const int StlEnableLoc = 15;
         private const uint StlEnableMask = 0b1;
@@ -41,47 +43,97 @@
 
         public int InputMaxFrequency
         {
-            get => (int)(_value >> InputMaxFrequencyLoc & InputMinFrequencyMask);
+            get => (int)(_value >> InputMaxFrequencyLoc & InputMaxFrequencyMask);
+            set
+            {
+                if (value < 0 || value > InputMaxFrequencyMask)
+                {
+                    throw new ArgumentOutOfRangeException(nameof(value), $"InputMaxFrequency must be between 0 and {InputMaxFrequencyMask}.");
+                }
+
+                uint valueUInt32 = (uint)(value);
+                _value = (_value & ~(InputMaxFrequencyMask << InputMaxFrequencyLoc)) | ((valueUInt32 & InputMaxFrequencyMask) << InputMaxFrequencyLoc);
+            }
         }
 
         public bool StlEnable
         {
             get => (_value >> StlEnableLoc & StlEnableMask) != 0;
+            set
+            {
+                uint valueUInt32 = (uint)(value ? 0b1 : 0b0);
+                _value = (_value & ~(StlEnableMask << StlEnableLoc)) | ((valueUInt32 & StlEnableMask) << StlEnableLoc);
+            }
         }
 
         public bool SsmConfig
         {
             get => (_value >> SsmConfigLoc & SsmConfigMask) != 0;
+            set
+            {
+                uint valueUInt32 = (uint)(value ? 0b1 : 0b0);
+                _value = (_value & ~(SsmConfigMask << SsmConfigLoc)) | ((valueUInt32 & SsmConfigMask) << SsmConfigLoc);
+            }
         }
 
         public Mct8329ADevMode DevMode
         {
             get => (Mct8329ADevMode)(_value >> DevModeLoc & DevModeMask);
+            set
+            {
+                uint valueUInt32 = (uint)value;
+                _value = (_value & ~(DevModeMask << DevModeLoc)) | ((valueUInt32 & DevModeMask) << DevModeLoc);
+            }
         }
 
         public Mct8329ASpdPwmRangeSelect SpdPwmRangeSelect
         {
             get => (Mct8329ASpdPwmRangeSelect)(_value >> SpdPwmRangeSelectLoc & SpdPwmRangeSelectMask);
+            set
+            {
+                uint valueUInt32 = (uint)value;
+                _value = (_value & ~(SpdPwmRangeSelectMask << SpdPwmRangeSelectLoc)) | ((valueUInt32 & SpdPwmRangeSelectMask) << SpdPwmRangeSelectLoc);
+            }
         }
 
         public Mct8329AClkSel ClkSel
         {
             get => (Mct8329AClkSel)(_value >> ClkSelLoc & ClkSelMask);
+            set
+            {
+                uint valueUInt32 = (uint)value;
+                _value = (_value & ~(ClkSelMask << ClkSelLoc)) | ((valueUInt32 & ClkSelMask) << ClkSelLoc);
+            }
         }
 
         public bool ExtClkEn
         {
             get => (_value >> ExtClkEnLoc & ExtClkEnMask) != 0;
+            set
+            {
+                uint valueUInt32 = (uint)(value ? 0b1 : 0b0);
+                _value = (_value & ~(ExtClkEnMask << ExtClkEnLoc)) | ((valueUInt32 & ExtClkEnMask) << ExtClkEnLoc);
+            }
         }
 
         public Mct8329AExtClkConfig ExtClkConfig
         {
             get => (Mct8329AExtClkConfig)(_value >> ExtClkConfigLoc & ExtClkConfigMask);
+            set
+            {
+                uint valueUInt32 = (uint)value;
+                _value = (_value & ~(ExtClkConfigMask << ExtClkConfigLoc)) | ((valueUInt32 & ExtClkConfigMask) << ExtClkConfigLoc);
+            }
         }
 
         public Mct8329ADigDeadTime DigDeadTime
         {
             get => (Mct8329ADigDeadTime)(_value >> DigDeadTimeLoc & DigDeadTimeMask);
+            set
+            {
+                uint valueUInt32 = (uint)value;
+                _value = (_value & ~(DigDeadTimeMask << DigDeadTimeLoc)) | ((valueUInt32 & DigDeadTimeMask) << DigDeadTimeLoc);
+            }
         }
 
         private Mct8329ADeviceConfig(uint value)
@@ -94,9 +146,9 @@
             return new Mct8329ADeviceConfig(value);
         }
 
-        public static implicit operator uint(Mct8329ADeviceConfig config)
+        public static implicit operator uint(Mct8329ADeviceConfig deviceConfig)
         {
-            return config._value;
+            return deviceConfig._value;
         }
     }
 }

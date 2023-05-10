@@ -18,6 +18,7 @@ namespace Biscuits.Devices.Extensions
                 Mct8329AState.Fault => "FAULT",
                 Mct8329AState.MotorDirection => "MOTOR_DIRECTION",
                 Mct8329AState.HallAlign => "HALL_ALIGN",
+                Mct8329AState.MotorIsd => "MOTOR_ISD",
                 Mct8329AState.MotorCalibrate => "MOTOR_CALIBRATE",
                 Mct8329AState.MotorDescel => "MOTOR_DESCEL",
                 Mct8329AState.MotorBrake => "MOTOR_BRAKE",

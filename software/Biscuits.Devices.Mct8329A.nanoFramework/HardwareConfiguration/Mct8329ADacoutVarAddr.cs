@@ -6,6 +6,7 @@
         CurrentDuty = 0x512,
         SetDuty = 0x522,
         MotorSpeedPU = 0x5CE,
-        DCBusPowerPU = 0x714
+        DCBusPowerPU = 0x714,
+        None = 0x0
     }
 }

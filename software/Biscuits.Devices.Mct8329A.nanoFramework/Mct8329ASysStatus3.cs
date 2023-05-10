@@ -30,9 +30,9 @@
             return new Mct8329ASysStatus3(value);
         }
 
-        public static implicit operator uint(Mct8329ASysStatus3 config)
+        public static implicit operator uint(Mct8329ASysStatus3 sysStatus3)
         {
-            return config._value;
+            return sysStatus3._value;
         }
     }
 }

@@ -126,9 +126,9 @@
             return new Mct8329AControllerFaultStatus(value);
         }
 
-        public static implicit operator uint(Mct8329AControllerFaultStatus config)
+        public static implicit operator uint(Mct8329AControllerFaultStatus controllerFaultStatus)
         {
-            return config._value;
+            return controllerFaultStatus._value;
         }
     }
 }

@@ -70,9 +70,9 @@
             return new Mct8329AGateDriverFaultStatus(value);
         }
 
-        public static implicit operator uint(Mct8329AGateDriverFaultStatus config)
+        public static implicit operator uint(Mct8329AGateDriverFaultStatus gateDriverFaultStatus)
         {
-            return config._value;
+            return gateDriverFaultStatus._value;
         }
     }
 }

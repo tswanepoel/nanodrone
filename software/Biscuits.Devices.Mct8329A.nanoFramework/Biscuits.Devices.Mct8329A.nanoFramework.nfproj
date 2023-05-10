@@ -18,6 +18,9 @@
   </PropertyGroup>
   <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.props" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.props')" />
   <ItemGroup>
+    <Compile Include="AlgorithmConfiguration\Extensions\Mca8329ACLAccExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mca8329APwmFreqOutExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329ACbcILimitExtensions.cs" />
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AMinDutyExtensions.cs" />
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AIpdRepeatExtensions.cs" />
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AIpdClkFreqExtensions.cs" />
@@ -35,10 +38,19 @@
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AOLDutyExtensions.cs" />
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AOLHandoffCyclesExtensions.cs" />
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AOpnClHandoffThrExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329ARefProfileConfigExtensions.cs" />
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AResyncMinThresholdExtensions.cs" />
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329ASlowFirstCycFreqExtensions.cs" />
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AStartupBrkTimeExtensions.cs" />
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AStatDetectThrExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Mca8329ACLAcc.cs" />
+    <Compile Include="AlgorithmConfiguration\Mca8329APwmFreqOut.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329ACbcILimit.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329AClosedLoop1.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329AClosedLoop2.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329AClosedLoop3.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329AClosedLoop4.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329AConstPwr.cs" />
     <Compile Include="AlgorithmConfiguration\Mct8329AFirstCycleFreqSel.cs" />
     <Compile Include="AlgorithmConfiguration\Mct8329AMinDuty.cs" />
     <Compile Include="AlgorithmConfiguration\Mct8329AOLHandoffCycles.cs" />
@@ -49,8 +61,11 @@
     <Compile Include="AlgorithmConfiguration\Mct8329AAlignDuty.cs" />
     <Compile Include="AlgorithmConfiguration\Mct8329AAlignRampRate.cs" />
     <Compile Include="AlgorithmConfiguration\Mct8329AAlignTime.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329ARefProfileConfig.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329ARefProfiles1.cs" />
     <Compile Include="Extensions\Mct8329AStateExtensions.cs" />
     <Compile Include="FaultConfiguration\Extensions\Mct8329ALckRetryExtensions.cs" />
+    <Compile Include="FaultConfiguration\Extensions\Mct8329ALockAbnSpeedExtensions.cs" />
     <Compile Include="FaultConfiguration\Extensions\Mct8329ALockILimitDegExtensions.cs" />
     <Compile Include="FaultConfiguration\Extensions\Mct8329ALockILimitModeExtensions.cs" />
     <Compile Include="FaultConfiguration\Extensions\Mct8329ACbcILimitModeExtensions.cs" />
@@ -130,6 +145,7 @@
     <Compile Include="AlgorithmConfiguration\Mct8329AStartupBrkTime.cs" />
     <Compile Include="AlgorithmConfiguration\Mct8329ABrkTime.cs" />
     <Compile Include="AlgorithmConfiguration\Mct8329ABrkMode.cs" />
+    <Compile Include="Mct8329AAlgoCtrl1.cs" />
     <Compile Include="Mct8329ADeviceCtrl.cs" />
     <Compile Include="Mct8329AGateDriverFaultStatus.cs" />
     <Compile Include="Mct8329AControllerFaultStatus.cs" />

@@ -20,7 +20,7 @@
 
         public float SpeedCmd
         {
-            get => ((_value >> SpeedCmdLoc) & SpeedCmdMask) / 10f;
+            get => ((_value >> SpeedCmdLoc) & SpeedCmdMask) / 32767f;
         }
 
         public bool I2cEntryStatus
@@ -38,9 +38,9 @@
             return new Mct8329ASysStatus1(value);
         }
 
-        public static implicit operator uint(Mct8329ASysStatus1 config)
+        public static implicit operator uint(Mct8329ASysStatus1 sysStatus1)
         {
-            return config._value;
+            return sysStatus1._value;
         }
     }
 }

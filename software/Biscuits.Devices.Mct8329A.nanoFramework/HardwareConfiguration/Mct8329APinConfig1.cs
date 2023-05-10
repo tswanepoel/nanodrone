@@ -1,6 +1,4 @@
-﻿using Biscuits.Devices.HardwareConfiguration.Extensions;
-
-namespace Biscuits.Devices.HardwareConfiguration
+﻿namespace Biscuits.Devices.HardwareConfiguration
 {
     public struct Mct8329APinConfig1
     {
@@ -19,7 +17,7 @@ namespace Biscuits.Devices.HardwareConfiguration
         private const int SpdCtrlModeLoc = 1;
         private const uint SpdCtrlModeMask = 0b11;
 
-        private readonly uint _value;
+        private uint _value;
 
         public bool Parity
         {
@@ -29,21 +27,41 @@ namespace Biscuits.Devices.HardwareConfiguration
         public Mct8329ADacoutVarAddr DacoutVarAddr
         {
             get => (Mct8329ADacoutVarAddr)(_value >> DacoutVarAddrLoc & DacoutVarAddrMask);
+            set
+            {
+                uint valueUInt32 = (uint)value;
+                _value = (_value & ~(DacoutVarAddrMask << DacoutVarAddrLoc)) | ((valueUInt32 & DacoutVarAddrMask) << DacoutVarAddrLoc);
+            }
         }
 
         public Mct8329ABrakeInput BrakeInput
         {
             get => (Mct8329ABrakeInput)(_value >> BrakeInputLoc & BrakeInputMask);
+            set
+            {
+                uint valueUInt32 = (uint)value;
+                _value = (_value & ~(BrakeInputMask << BrakeInputLoc)) | ((valueUInt32 & BrakeInputMask) << BrakeInputLoc);
+            }
         }
 
         public Mct8329ADirInput DirInput
         {
             get => (Mct8329ADirInput)(_value >> DirInputLoc & DirInputMask);
+            set
+            {
+                uint valueUInt32 = (uint)value;
+                _value = (_value & ~(DirInputMask << DirInputLoc)) | ((valueUInt32 & DirInputMask) << DirInputLoc);
+            }
         }
 
         public Mct8329ASpdCtrlMode SpdCtrlMode
         {
             get => (Mct8329ASpdCtrlMode)(_value >> SpdCtrlModeLoc & SpdCtrlModeMask);
+            set
+            {
+                uint valueUInt32 = (uint)value;
+                _value = (_value & ~(SpdCtrlModeMask << SpdCtrlModeLoc)) | ((valueUInt32 & SpdCtrlModeMask) << SpdCtrlModeLoc);
+            }
         }
 
         private Mct8329APinConfig1(uint value)
@@ -56,9 +74,9 @@ namespace Biscuits.Devices.HardwareConfiguration
             return new Mct8329APinConfig1(value);
         }
 
-        public static implicit operator uint(Mct8329APinConfig1 config)
+        public static implicit operator uint(Mct8329APinConfig1 pinConfig1)
         {
-            return config._value;
+            return pinConfig1._value;
         }
     }
 }

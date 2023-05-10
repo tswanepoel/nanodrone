@@ -13,6 +13,7 @@
         Fault = 0x8,
         MotorDirection = 0x9,
         HallAlign = 0xA,
+        MotorIsd = 0xB,
         MotorCalibrate = 0xC,
         MotorDescel = 0xD,
         MotorBrake = 0xE
