@@ -6,7 +6,7 @@
         DivideBy1_2PoleMotorMechanicalSpeed = 0x1,
         DivideBy2_4PoleMotorMechanicalSpeed = 0x2,
         DivideBy3_6PoleMotorMechanicalSpeed = 0x3,
-        DivideBy4_8oleMotorMechanicalSpeed = 0x4,
+        DivideBy4_8PoleMotorMechanicalSpeed = 0x4,
         DivideBy5_10PoleMotorMechanicalSpeed = 0x5,
         DivideBy6_12PoleMotorMechanicalSpeed = 0x6,
         DivideBy7_14PoleMotorMechanicalSpeed = 0x7,

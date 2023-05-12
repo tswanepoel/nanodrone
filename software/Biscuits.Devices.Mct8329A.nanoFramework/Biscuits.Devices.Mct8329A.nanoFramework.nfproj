@@ -18,10 +18,19 @@
   </PropertyGroup>
   <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.props" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.props')" />
   <ItemGroup>
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AActSpinBrkThrExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329ABrakeDutyThresholdExtensions.cs" />
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329ACLDecConfigExtensions.cs" />
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329ACLDecExtensions.cs" />
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329ACommControlExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AFGBemfThrExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AFGDivFactorExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AFGSelExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AIntegZCMethodExtensions.cs" />
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329ALDAnglePolarityExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AMtrStopBrkTimeExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AMtrStopExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AOLILimitConfigExtensions.cs" />
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329APwmModeExtensions.cs" />
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329APwmModulExtensions.cs" />
     <Compile Include="AlgorithmConfiguration\Mct8329AAvsLimitHyst.cs" />
