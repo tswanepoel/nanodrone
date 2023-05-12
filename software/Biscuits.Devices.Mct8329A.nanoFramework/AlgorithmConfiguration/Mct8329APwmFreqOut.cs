@@ -1,6 +1,6 @@
 ﻿namespace Biscuits.Devices.AlgorithmConfiguration
 {
-    public enum Mca8329APwmFreqOut
+    public enum Mct8329APwmFreqOut
     {
         Value5kHz = 0x0,
         Value6kHz = 0x1,

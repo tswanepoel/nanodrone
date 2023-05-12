@@ -1,4 +1,4 @@
-namespace Biscuits.Devices.GateDriverConfiguration
+namespace Biscuits.Devices.GateDriverConfiguration.Extensions
 {
     using System;
 

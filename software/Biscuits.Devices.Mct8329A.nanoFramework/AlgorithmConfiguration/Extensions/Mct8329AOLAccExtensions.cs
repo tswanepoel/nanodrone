@@ -4,11 +4,11 @@
 
     public static class Mct8329AOLAccExtensions
     {
-        public static string GetDescription(this Mct8329AOLAcc olAcc)
-            => olAcc != Mct8329AOLAcc.NoLimit ? $"{olAcc.GetValue():F3} Hz/s²" : "No limit";
+        public static string GetDescription(this Mct8329AOLAcc oLAcc)
+            => oLAcc != Mct8329AOLAcc.NoLimit ? $"{oLAcc.GetValue():F3} Hz/s²" : "No limit";
 
-        public static float GetValue(this Mct8329AOLAcc olAcc)
-            => olAcc switch
+        public static float GetValue(this Mct8329AOLAcc oLAcc)
+            => oLAcc switch
             {
                 Mct8329AOLAcc.Value5mHzps2 => .005f,
                 Mct8329AOLAcc.Value10mHzps2 => .01f,

@@ -1,6 +1,6 @@
 ﻿namespace Biscuits.Devices.AlgorithmConfiguration
 {
-    public enum Mca8329ACLAcc
+    public enum Mct8329ACLDec
     {
         Value5mVps = 0x0,
         Value10mVps = 0x1,

@@ -4,11 +4,11 @@
 
     public static class Mct8329AOLHandoffCyclesExtensions
     {
-        public static string GetDescription(this Mct8329AOLHandoffCycles olHandoffCycles)
-            => $"{olHandoffCycles.GetValue()}";
+        public static string GetDescription(this Mct8329AOLHandoffCycles oLHandoffCycles)
+            => $"{oLHandoffCycles.GetValue()}";
 
-        public static int GetValue(this Mct8329AOLHandoffCycles olHandoffCycles)
-            => olHandoffCycles switch
+        public static int GetValue(this Mct8329AOLHandoffCycles oLHandoffCycles)
+            => oLHandoffCycles switch
             {
                 Mct8329AOLHandoffCycles.Value3 => 3,
                 Mct8329AOLHandoffCycles.Value6 => 6,

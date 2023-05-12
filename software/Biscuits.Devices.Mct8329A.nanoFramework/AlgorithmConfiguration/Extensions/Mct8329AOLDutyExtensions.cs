@@ -4,11 +4,11 @@
 
     public static class Mct8329AOLDutyExtensions
     {
-        public static string GetDescription(this Mct8329AOLDuty olDuty)
-            => $"{olDuty.GetValue() * 100f} %";
+        public static string GetDescription(this Mct8329AOLDuty oLDuty)
+            => $"{oLDuty.GetValue() * 100f} %";
 
-        public static float GetValue(this Mct8329AOLDuty olDuty)
-            => olDuty switch
+        public static float GetValue(this Mct8329AOLDuty oLDuty)
+            => oLDuty switch
             {
                 Mct8329AOLDuty.Value10Percent => .1f,
                 Mct8329AOLDuty.Value15Percent => .15f,

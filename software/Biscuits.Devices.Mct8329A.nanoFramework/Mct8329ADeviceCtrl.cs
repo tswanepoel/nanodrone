@@ -2,6 +2,9 @@
 {
     using System;
 
+    /// <summary>
+    /// Represents device control registers.
+    /// </summary>
     public struct Mct8329ADeviceCtrl
     {
         private const int SpeedCtrlLoc = 16;
@@ -12,6 +15,9 @@
 
         private uint _value;
 
+        /// <summary>
+        /// Gets or sets the I2C speed command percentage.
+        /// </summary>
         public float SpeedCtrl
         {
             get => ((_value >> SpeedCtrlLoc) & SpeedCtrlMask) / 32767f;
@@ -27,6 +33,9 @@
             }
         }
 
+        /// <summary>
+        /// Gets or sets the value indicating whether <see cref="SpeedCtrl" /> overrides the hardware SPEED pin.
+        /// </summary>
         public bool Override
         {
             get => ((_value >> OverrideLoc) & OverrideMask) != 0;
@@ -42,11 +51,17 @@
             _value = value;
         }
 
+        /// <summary>
+        /// Converts a raw value to an instance of <see cref="Mct8329ADeviceCtrl" />.
+        /// </summary>
         public static explicit operator Mct8329ADeviceCtrl(uint value)
         {
             return new Mct8329ADeviceCtrl(value);
         }
 
+        /// <summary>
+        /// Converts an instance of <see cref="Mct8329ADeviceCtrl" /> to a raw value.
+        /// </summary>
         public static implicit operator uint(Mct8329ADeviceCtrl deviceCtrl)
         {
             return deviceCtrl._value;

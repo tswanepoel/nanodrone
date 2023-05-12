@@ -152,6 +152,17 @@
             WriteUInt32(0x8C/*CLOSED_LOOP4*/, (uint)closedLoop4);
         }
 
+        public Mct8329AConstSpeed ReadConstSpeed()
+        {
+            if (_disposed)
+            {
+                throw new ObjectDisposedException();
+            }
+
+            uint value = ReadUInt32(0x8E/*CONST_SPEED*/);
+            return (Mct8329AConstSpeed)value;
+        }
+
         public Mct8329AConstPwr ReadConstPwr()
         {
             if (_disposed)
@@ -171,6 +182,16 @@
             }
 
             WriteUInt32(0x90/*CONST_PWR*/, (uint)constPwr);
+        }
+
+        public void WriteConstSpeed(Mct8329AConstSpeed constSpeed)
+        {
+            if (_disposed)
+            {
+                throw new ObjectDisposedException();
+            }
+
+            WriteUInt32(0x8E/*CONST_SPEED*/, (uint)constSpeed);
         }
 
         public Mct8329ARefProfiles1 ReadRefProfiles1()

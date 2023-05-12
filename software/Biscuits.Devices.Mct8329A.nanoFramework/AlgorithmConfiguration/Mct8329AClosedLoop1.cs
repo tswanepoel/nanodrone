@@ -1,5 +1,7 @@
 ﻿namespace Biscuits.Devices.AlgorithmConfiguration
 {
+    using System;
+
     public struct Mct8329AClosedLoop1
     {
         private const int ParityLoc = 31;
@@ -39,9 +41,19 @@
             get => (_value >> ParityLoc & ParityMask) != 0;
         }
 
-        public Mca8329ACLAcc CLAcc
+        public Mct8329ACommControl CommControl
         {
-            get => (Mca8329ACLAcc)(_value >> CLAccLoc & CLAccMask);
+            get => (Mct8329ACommControl)(_value >> CommControlLoc & CommControlMask);
+            set
+            {
+                uint valueUInt32 = (uint)value;
+                _value = (_value & ~(CommControlMask << CommControlLoc)) | ((valueUInt32 & CommControlMask) << CommControlLoc);
+            }
+        }
+
+        public Mct8329ACLAcc CLAcc
+        {
+            get => (Mct8329ACLAcc)(_value >> CLAccLoc & CLAccMask);
             set
             {
                 uint valueUInt32 = (uint)value;
@@ -49,13 +61,80 @@
             }
         }
 
-        public Mca8329APwmFreqOut PwmFreqOut
+        public Mct8329ACLDecConfig CLDecConfig
         {
-            get => (Mca8329APwmFreqOut)(_value >> PwmFreqOutLoc & PwmFreqOutMask);
+            get => (Mct8329ACLDecConfig)(_value >> CLDecConfigLoc & CLDecConfigMask);
+            set
+            {
+                uint valueUInt32 = (uint)value;
+                _value = (_value & ~(CLDecConfigMask << CLDecConfigLoc)) | ((valueUInt32 & CLDecConfigMask) << CLDecConfigLoc);
+            }
+        }
+
+        public Mct8329ACLDec CLDec
+        {
+            get => (Mct8329ACLDec)(_value >> CLDecLoc & CLDecMask);
+            set
+            {
+                uint valueUInt32 = (uint)value;
+                _value = (_value & ~(CLDecMask << CLDecLoc)) | ((valueUInt32 & CLDecMask) << CLDecLoc);
+            }
+        }
+
+        public Mct8329APwmFreqOut PwmFreqOut
+        {
+            get => (Mct8329APwmFreqOut)(_value >> PwmFreqOutLoc & PwmFreqOutMask);
             set
             {
                 uint valueUInt32 = (uint)value;
                 _value = (_value & ~(PwmFreqOutMask << PwmFreqOutLoc)) | ((valueUInt32 & PwmFreqOutMask) << PwmFreqOutLoc);
+            }
+        }
+
+        public Mct8329APwmModul PwmModul
+        {
+            get => (Mct8329APwmModul)(_value >> PwmModulLoc & PwmModulMask);
+            set
+            {
+                uint valueUInt32 = (uint)value;
+                _value = (_value & ~(PwmModulMask << PwmModulLoc)) | ((valueUInt32 & PwmModulMask) << PwmModulLoc);
+            }
+        }
+
+        public Mct8329APwmMode PwmMode
+        {
+            get => (Mct8329APwmMode)(_value >> PwmModeLoc & PwmModeMask);
+            set
+            {
+                uint valueUInt32 = (uint)value;
+                _value = (_value & ~(PwmModeMask << PwmModeLoc)) | ((valueUInt32 & PwmModeMask) << PwmModeLoc);
+            }
+        }
+
+        public Mct8329ALDAnglePolarity LDAnglePolarity
+        {
+            get => (Mct8329ALDAnglePolarity)(_value >> LDAnglePolarityLoc & LDAnglePolarityMask);
+            set
+            {
+                uint valueUInt32 = (uint)value;
+                _value = (_value & ~(LDAnglePolarityMask << LDAnglePolarityLoc)) | ((valueUInt32 & LDAnglePolarityMask) << LDAnglePolarityLoc);
+            }
+        }
+
+        public float LDAngle
+        {
+            get => (_value >> LDAngleLoc & LDAngleMask) * .12f;
+            set
+            {
+                const float maxValue = LDAngleMask / .12f;
+
+                if (value < 0f || value > maxValue)
+                {
+                    throw new ArgumentOutOfRangeException(nameof(value), $"LDAngle must be between 0 and {maxValue}.");
+                }
+
+                uint valueUInt32 = (uint)(value / .12f);
+                _value = (_value & ~(LDAngleMask << LDAngleLoc)) | ((valueUInt32 & LDAngleMask) << LDAngleLoc);
             }
         }
 

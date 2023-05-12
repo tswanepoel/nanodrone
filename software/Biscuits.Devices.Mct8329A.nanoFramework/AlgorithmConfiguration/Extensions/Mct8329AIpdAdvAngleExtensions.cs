@@ -5,7 +5,7 @@
     public static class Mct8329AIpdAdvAngleExtensions
     {
         public static string GetDescription(this Mct8329AIpdAdvAngle ipdAdvAngle)
-            => $"{ipdAdvAngle.GetValue()} degrees";
+            => $"{ipdAdvAngle.GetValue()} °";
 
         public static float GetValue(this Mct8329AIpdAdvAngle ipdAdvAngle)
             => ipdAdvAngle switch
