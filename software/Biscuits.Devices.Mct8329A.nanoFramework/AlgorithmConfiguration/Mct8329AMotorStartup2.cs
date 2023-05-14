@@ -59,9 +59,9 @@
             }
         }
 
-        public Mct8329AOLAcc OLAccA1
+        public Mct8329AOLAccA1 OLAccA1
         {
-            get => (Mct8329AOLAcc)(_value >> OLAccA1Loc & OLAccA1Mask);
+            get => (Mct8329AOLAccA1)(_value >> OLAccA1Loc & OLAccA1Mask);
             set
             {
                 uint valueUInt32 = (uint)value;
@@ -69,9 +69,9 @@
             }
         }
 
-        public Mct8329AOLAcc OLAccA2
+        public Mct8329AOLAccA2 OLAccA2
         {
-            get => (Mct8329AOLAcc)(_value >> OLAccA2Loc & OLAccA2Mask);
+            get => (Mct8329AOLAccA2)(_value >> OLAccA2Loc & OLAccA2Mask);
             set
             {
                 uint valueUInt32 = (uint)value;

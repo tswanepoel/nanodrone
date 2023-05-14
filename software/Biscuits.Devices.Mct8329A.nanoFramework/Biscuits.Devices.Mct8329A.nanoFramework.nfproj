@@ -22,6 +22,7 @@
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329ABrakeDutyThresholdExtensions.cs" />
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329ACLDecConfigExtensions.cs" />
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329ACLDecExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AClosedLoopModeExtensions.cs" />
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329ACommControlExtensions.cs" />
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AFGBemfThrExtensions.cs" />
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AFGDivFactorExtensions.cs" />
@@ -30,9 +31,12 @@
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329ALDAnglePolarityExtensions.cs" />
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AMtrStopBrkTimeExtensions.cs" />
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AMtrStopExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AOLAccA1Extensions.cs" />
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AOLILimitConfigExtensions.cs" />
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329APwmModeExtensions.cs" />
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329APwmModulExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329ASpdPowerVMaxExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329ASpdPowerVMinExtensions.cs" />
     <Compile Include="AlgorithmConfiguration\Mct8329AAvsLimitHyst.cs" />
     <Compile Include="AlgorithmConfiguration\Mct8329AAvsNegCurrLimit.cs" />
     <Compile Include="AlgorithmConfiguration\Mct8329AClosedLoopMode.cs" />
@@ -59,7 +63,7 @@
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AAlignTimeExtensions.cs" />
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329ABrkTimeExtensions.cs" />
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AMtrStartupExtensions.cs" />
-    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AOLAccExtensions.cs" />
+    <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AOLAccA2Extensions.cs" />
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AOLDutyExtensions.cs" />
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AOLHandoffCyclesExtensions.cs" />
     <Compile Include="AlgorithmConfiguration\Extensions\Mct8329AOpnClHandoffThrExtensions.cs" />
@@ -93,6 +97,7 @@
     <Compile Include="AlgorithmConfiguration\Mct8329ALDAnglePolarity.cs" />
     <Compile Include="AlgorithmConfiguration\Mct8329AMtrStop.cs" />
     <Compile Include="AlgorithmConfiguration\Mct8329AMtrStopBrkTime.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329AOLAccA2.cs" />
     <Compile Include="AlgorithmConfiguration\Mct8329AOLILimitConfig.cs" />
     <Compile Include="AlgorithmConfiguration\Mct8329APwmFreqOut.cs" />
     <Compile Include="AlgorithmConfiguration\Mct8329ACbcILimit.cs" />
@@ -106,7 +111,7 @@
     <Compile Include="AlgorithmConfiguration\Mct8329AOLHandoffCycles.cs" />
     <Compile Include="AlgorithmConfiguration\Mct8329AOpnClHandoffThr.cs" />
     <Compile Include="AlgorithmConfiguration\Mct8329AMotorStartup2.cs" />
-    <Compile Include="AlgorithmConfiguration\Mct8329AOLAcc.cs" />
+    <Compile Include="AlgorithmConfiguration\Mct8329AOLAccA1.cs" />
     <Compile Include="AlgorithmConfiguration\Mct8329AOLDuty.cs" />
     <Compile Include="AlgorithmConfiguration\Mct8329AAlignDuty.cs" />
     <Compile Include="AlgorithmConfiguration\Mct8329AAlignRampRate.cs" />

@@ -31,7 +31,7 @@
             get => ((_value >> MaxSpeedLoc) & MaxSpeedMask) / 16f;
             set
             {
-                const float maxValue = MaxSpeedMask / 16f;
+                const float maxValue = 3_000f;
 
                 if (value < 0f || value > maxValue)
                 {

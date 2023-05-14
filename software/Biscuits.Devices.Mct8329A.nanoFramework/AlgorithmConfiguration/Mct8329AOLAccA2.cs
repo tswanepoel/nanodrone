@@ -1,6 +1,6 @@
 ﻿namespace Biscuits.Devices.AlgorithmConfiguration
 {
-    public enum Mct8329AOLAcc
+    public enum Mct8329AOLAccA2
     {
         Value5mHzps2 = 0x0,
         Value10mHzps2 = 0x1,

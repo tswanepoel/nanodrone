@@ -34,7 +34,7 @@
             get => ((_value >> SpdPowerKpLoc) & SpdPowerKpMask) / 10_000f;
             set
             {
-                const float maxValue = SpdPowerKpMask * 10_000f;
+                const float maxValue = SpdPowerKpMask / 10_000f;
 
                 if (value < 0f || value > maxValue)
                 {
@@ -51,7 +51,7 @@
             get => ((_value >> SpdPowerKiLoc) & SpdPowerKiMask) / 1_000_000f;
             set
             {
-                const float maxValue = SpdPowerKiMask * 1_000_000f;
+                const float maxValue = SpdPowerKiMask / 1_000_000f;
 
                 if (value < 0f || value > maxValue)
                 {

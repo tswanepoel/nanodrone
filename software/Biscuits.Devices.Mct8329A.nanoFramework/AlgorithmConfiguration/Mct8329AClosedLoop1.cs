@@ -126,7 +126,7 @@
             get => (_value >> LDAngleLoc & LDAngleMask) * .12f;
             set
             {
-                const float maxValue = LDAngleMask / .12f;
+                const float maxValue = LDAngleMask * .12f;
 
                 if (value < 0f || value > maxValue)
                 {
